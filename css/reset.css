@@ -1,0 +1,416 @@
+/*
+===============================================
+RESET.CSS - Browser Reset & Normalization
+Ultra-complete reset for perfect cross-browser consistency
+===============================================
+*/
+
+/* ==========================================
+   CSS RESET & NORMALIZATION
+========================================== */
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default styling from all elements */
+* {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    background: transparent;
+    outline: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+
+/* Root element */
+html {
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+/* Body reset */
+body {
+    line-height: 1;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+/* Lists */
+ol, ul {
+    list-style: none;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:active,
+a:hover {
+    outline-width: 0;
+}
+
+/* Quotes */
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Forms */
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+/* Checkbox and radio */
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/* Remove iOS input shadows */
+input,
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+/* iOS button reset */
+input[type="submit"],
+input[type="button"],
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+/* Remove iOS highlights */
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Allow text selection for specific elements */
+p, h1, h2, h3, h4, h5, h6,
+span, label, li, td, th {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* Media elements */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    border-style: none;
+    vertical-align: middle;
+}
+
+svg {
+    overflow: hidden;
+}
+
+/* Remove default fieldset styling */
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal;
+    margin-left: -7px;
+}
+
+/* Remove default select arrow */
+select {
+    background-image: none;
+}
+
+/* Accessibility improvements */
+[hidden] {
+    display: none !important;
+}
+
+/* Focus management */
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* Improve readability */
+h1, h2, h3, h4, h5, h6,
+p, li, td, th, label {
+    line-height: 1.4;
+}
+
+/* Remove animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==========================================
+   MOBILE-FIRST IMPROVEMENTS
+========================================== */
+
+/* Prevent zoom on input focus (iOS) */
+@media screen and (max-width: 768px) {
+    input,
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* Prevent horizontal scroll */
+html,
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Improve touch targets */
+button,
+input[type="submit"],
+input[type="button"],
+a {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* ==========================================
+   PRINT STYLES RESET
+========================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    img {
+        page-break-inside: avoid;
+    }
+
+    h1, h2, h3,
+    h4, h5, h6 {
+        page-break-after: avoid;
+    }
+}
+
+/* ==========================================
+   WEBKIT SPECIFIC RESETS
+========================================== */
+
+/* Remove iOS button styling */
+input[type="button"],
+input[type="submit"],
+button {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+/* Remove iOS search field styling */
+input[type="search"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+/* Remove iOS select styling */
+select {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+/* ==========================================
+   PERFORMANCE OPTIMIZATIONS
+========================================== */
+
+/* GPU acceleration for smooth animations */
+.gpu-accelerated {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000;
+    -webkit-perspective: 1000;
+}
+
+/* Optimize font rendering */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================
+   ROOT APP CONTAINER
+========================================== */
+
+#app {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Ensure consistent sizing */
+.container,
+.app-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Reset for custom components */
+.section,
+.component {
+    position: relative;
+    width: 100%;
+}
+
+/*
+===============================================
+END RESET.CSS
+This reset provides a solid foundation for 
+consistent styling across all browsers and devices
+===============================================
+*/

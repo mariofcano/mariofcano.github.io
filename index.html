@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta Tags Esenciales -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Portfolio profesional de Mario FCA - Desarrollador Full Stack especializado en aplicaciones web modernas, JavaScript, React, Node.js y tecnologías frontend/backend">
+    <meta name="keywords" content="Mario FCA, desarrollador full stack, portfolio, web developer, javascript, react, node.js, css, html, frontend, backend, programador, aplicaciones web">
+    <meta name="author" content="Mario FCA">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mariofca.dev">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="ES">
+    <meta name="geo.placename" content="España">
+    
+    <!-- Revisit -->
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Copyright -->
+    <meta name="copyright" content="Mario FCA">
+    
+    <!-- Meta Tags para PWA -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Mario Portfolio">
+    
+    <!-- Preconnect para optimización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    
+    <!-- Preload recursos críticos -->
+    <link rel="preload" href="js/app.js" as="script">
+    <link rel="preload" href="js/router.js" as="script">
+    
+    <title>Mario FCA - Portfolio | Desarrollador Full Stack | JavaScript, React, Node.js</title>
+    
+    <!-- Datos Estructurados Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mario FCA",
+        "jobTitle": "Desarrollador Full Stack",
+        "description": "Desarrollador Full Stack especializado en aplicaciones web modernas con JavaScript, React, Node.js y tecnologías frontend/backend",
+        "url": "https://mariofca.dev",
+        "sameAs": [],
+        "knowsAbout": [
+            "JavaScript",
+            "React",
+            "Node.js",
+            "HTML5",
+            "CSS3",
+            "Full Stack Development",
+            "Frontend Development",
+            "Backend Development",
+            "Web Applications"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance Developer"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p class="loading-text">Cargando experiencia...</p>
+        </div>
+    </div>
+
+    <!-- Main App Container -->
+    <div id="app" class="app-container">
+        
+        <!-- Header & Navigation -->
+        <header id="header" class="header">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <!-- Logo -->
+                    <div class="nav-logo">
+                        <a href="#home" class="logo-link">
+                            <span class="logo-text">Mario<span class="logo-accent">FCA</span></span>
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Menu -->
+                    <ul class="nav-menu" id="nav-menu">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link active" data-section="home">
+                                <span class="nav-text">Inicio</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link" data-section="about">
+                                <span class="nav-text">Sobre Mí</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#skills" class="nav-link" data-section="skills">
+                                <span class="nav-text">Habilidades</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#portfolio" class="nav-link" data-section="portfolio">
+                                <span class="nav-text">Portfolio</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#experience" class="nav-link" data-section="experience">
+                                <span class="nav-text">Experiencia</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link" data-section="contact">
+                                <span class="nav-text">Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Theme Toggle -->
+                    <div class="theme-toggle">
+                        <button id="theme-btn" class="theme-btn" aria-label="Cambiar tema">
+                            <span class="theme-icon sun">☀️</span>
+                            <span class="theme-icon moon">🌙</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <div class="nav-toggle" id="nav-toggle">
+                        <span class="bar bar1"></span>
+                        <span class="bar bar2"></span>
+                        <span class="bar bar3"></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content" class="main-content">
+            
+            <!-- Hero Section -->
+            <section id="home" class="section hero-section">
+                <div class="hero-container">
+                    <div class="hero-background">
+                        <div class="hero-gradient"></div>
+                        <div class="hero-particles" id="particles"></div>
+                    </div>
+                    
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <h1 class="hero-title">
+                                <span class="title-line">Hola, soy</span>
+                                <span class="title-name">Mario FCA</span>
+                                <span class="title-role" id="typed-text">Desarrollador Full Stack</span>
+                            </h1>
+                            
+                            <p class="hero-description">
+                                Creo experiencias web excepcionales combinando diseño moderno 
+                                con código limpio y eficiente. Especializado en JavaScript, 
+                                React y tecnologías full-stack.
+                            </p>
+                            
+                            <div class="hero-actions">
+                                <a href="#portfolio" class="btn btn-primary">
+                                    <span>Ver Mi Trabajo</span>
+                                </a>
+                                <a href="#contact" class="btn btn-secondary">
+                                    <span>Contáctame</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-visual">
+                            <div class="hero-avatar">
+                                <img src="assets/images/avatar.jpg" alt="Mario FCA - Desarrollador Full Stack" loading="eager">
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Mensaje *</label>
+                                    <textarea 
+                                        id="message" 
+                                        name="message" 
+                                        class="form-textarea" 
+                                        placeholder="Cuéntame sobre tu proyecto o consulta..."
+                                        rows="5"
+                                        required
+                                    ></textarea>
+                                    <span class="form-error" id="message-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-checkbox">
+                                        <input type="checkbox" id="privacy" name="privacy" required>
+                                        <span class="checkbox-mark"></span>
+                                        <span class="checkbox-text">
+                                            Acepto la política de privacidad y el tratamiento de mis datos
+                                        </span>
+                                    </label>
+                                    <span class="form-error" id="privacy-error"></span>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                                        <span class="btn-text">Enviar Mensaje</span>
+                                        <span class="btn-loading">Enviando...</span>
+                                    </button>
+                                </div>
+                                
+                                <div class="form-status" id="form-status"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <!-- Footer -->
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <span class="logo-text">Mario<span class="logo-accent">FCA</span></span>
+                        </div>
+                        <p class="footer-description">
+                            Desarrollador Full Stack apasionado por crear 
+                            experiencias digitales excepcionales.
+                        </p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h4 class="footer-title">Navegación</h4>
+                            <ul class="footer-list">
+                                <li><a href="#home" class="footer-link">Inicio</a></li>
+                                <li><a href="#about" class="footer-link">Sobre Mí</a></li>
+                                <li><a href="#skills" class="footer-link">Habilidades</a></li>
+                                <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
+                                <li><a href="#experience" class="footer-link">Experiencia</a></li>
+                                <li><a href="#contact" class="footer-link">Contacto</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 class="footer-title">Servicios</h4>
+                            <ul class="footer-list">
+                                <li><span class="footer-text">Desarrollo Web</span></li>
+                                <li><span class="footer-text">Aplicaciones SPA</span></li>
+                                <li><span class="footer-text">APIs REST</span></li>
+                                <li><span class="footer-text">Consultoría Técnica</span></li>
+                                <li><span class="footer-text">Optimización SEO</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 class="footer-title">Contacto</h4>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="mailto:mario@example.com" class="footer-link">
+                                        mario@example.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+34600000000" class="footer-link">
+                                        +34 600 000 000
+                                    </a>
+                                </li>
+                                <li><span class="footer-text">España</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        <p>© 2024 Mario FCA. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="footer-legal">
+                        <a href="#privacy" class="legal-link">Política de Privacidad</a>
+                        <a href="#terms" class="legal-link">Términos de Uso</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Modals -->
+        
+        <!-- Portfolio Modal -->
+        <div id="portfolio-modal" class="modal">
+            <div class="modal-overlay" id="modal-overlay"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-title">Título del Proyecto</h3>
+                    <button class="modal-close" id="modal-close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                
+                <div class="modal-content">
+                    <div class="modal-image">
+                        <img id="modal-image" src="" alt="" loading="lazy">
+                    </div>
+                    
+                    <div class="modal-info">
+                        <div class="modal-description">
+                            <p id="modal-description">Descripción del proyecto...</p>
+                        </div>
+                        
+                        <div class="modal-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Cliente:</span>
+                                <span class="detail-value" id="modal-client">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Duración:</span>
+                                <span class="detail-value" id="modal-duration">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Año:</span>
+                                <span class="detail-value" id="modal-year">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-tech">
+                            <h4 class="tech-title">Tecnologías Utilizadas:</h4>
+                            <div class="tech-list" id="modal-tech-list">
+                                <!-- Tech tags will be inserted here -->
+                            </div>
+                        </div>
+                        
+                        <div class="modal-features">
+                            <h4 class="features-title">Características Principales:</h4>
+                            <ul class="features-list" id="modal-features-list">
+                                <!-- Features will be inserted here -->
+                            </ul>
+                        </div>
+                        
+                        <div class="modal-actions">
+                            <a id="modal-demo" href="#" class="btn btn-primary" target="_blank" rel="noopener">
+                                Ver Demo
+                            </a>
+                            <a id="modal-code" href="#" class="btn btn-secondary" target="_blank" rel="noopener">
+                                Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m18 15-6-6-6 6"/>
+            </svg>
+        </button>
+        
+        <!-- Cursor Effect (Desktop) -->
+        <div class="cursor" id="cursor">
+            <div class="cursor-dot"></div>
+            <div class="cursor-outline"></div>
+        </div>
+        
+        <!-- Progress Bar -->
+        <div class="scroll-progress">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        
+    </div>avatar-ring"></div>
+                                <div class="avatar-decoration"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-scroll">
+                        <a href="#about" class="scroll-indicator">
+                            <span class="scroll-text">Scroll</span>
+                            <div class="scroll-arrow"></div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section about-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-number">01</span>
+                        <h2 class="section-title">Sobre Mí</h2>
+                        <p class="section-subtitle">
+                            Conoce mi historia y pasión por el desarrollo
+                        </p>
+                    </div>
+                    
+                    <div class="about-content">
+                        <div class="about-text">
+                            <div class="about-description">
+                                <p>
+                                    Soy un desarrollador full-stack apasionado por crear soluciones 
+                                    digitales innovadoras. Con más de 3 años de experiencia, me 
+                                    especializo en construir aplicaciones web modernas y escalables.
+                                </p>
+                                <p>
+                                    Mi enfoque se centra en escribir código limpio, implementar 
+                                    mejores prácticas y crear interfaces de usuario intuitivas que 
+                                    brinden experiencias excepcionales.
+                                </p>
+                                <p>
+                                    Cuando no estoy programando, disfruto aprendiendo nuevas 
+                                    tecnologías, contribuyendo a proyectos open source y 
+                                    compartiendo conocimiento con la comunidad de desarrolladores.
+                                </p>
+                            </div>
+                            
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number" data-target="50">0</span>
+                                    <span class="stat-label">Proyectos Completados</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number" data-target="3">0</span>
+                                    <span class="stat-label">Años de Experiencia</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number" data-target="100">0</span>
+                                    <span class="stat-label">% Satisfacción Cliente</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-cards">
+                            <div class="info-card">
+                                <div class="card-icon">🎯</div>
+                                <h3 class="card-title">Enfoque</h3>
+                                <p class="card-description">
+                                    Desarrollo orientado a resultados con atención 
+                                    al detalle y optimización continua.
+                                </p>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="card-icon">🚀</div>
+                                <h3 class="card-title">Innovación</h3>
+                                <p class="card-description">
+                                    Siempre explorando nuevas tecnologías y 
+                                    metodologías para mejorar los procesos.
+                                </p>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="card-icon">🤝</div>
+                                <h3 class="card-title">Colaboración</h3>
+                                <p class="card-description">
+                                    Trabajo en equipo efectivo con comunicación 
+                                    clara y transparente en cada proyecto.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section skills-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-number">02</span>
+                        <h2 class="section-title">Habilidades</h2>
+                        <p class="section-subtitle">
+                            Tecnologías y herramientas que domino
+                        </p>
+                    </div>
+                    
+                    <div class="skills-content">
+                        <div class="skills-categories">
+                            <div class="skill-category">
+                                <h3 class="category-title">Frontend</h3>
+                                <div class="skills-list">
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">HTML5 & CSS3</span>
+                                            <span class="skill-percentage">95%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-width="95"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">JavaScript</span>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-width="90"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">React</span>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-width="85"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Vue.js</span>
+                                            <span class="skill-percentage">80%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-width="80"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h3 class="category-title">Backend</h3>
+                                <div class="skills-list">
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Node.js</span>
+                                            <span class="skill-percentage">88%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-width="88"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Express.js</span>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-width="85"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">MongoDB</span>
+                                            <span class="skill-percentage">82%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-width="82"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">PostgreSQL</span>
+                                            <span class="skill-percentage">75%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-width="75"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h3 class="category-title">Herramientas</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <div class="tool-icon">
+                                            <img src="assets/icons/git.svg" alt="Git" loading="lazy">
+                                        </div>
+                                        <span class="tool-name">Git</span>
+                                    </div>
+                                    
+                                    <div class="tool-item">
+                                        <div class="tool-icon">
+                                            <img src="assets/icons/docker.svg" alt="Docker" loading="lazy">
+                                        </div>
+                                        <span class="tool-name">Docker</span>
+                                    </div>
+                                    
+                                    <div class="tool-item">
+                                        <div class="tool-icon">
+                                            <img src="assets/icons/webpack.svg" alt="Webpack" loading="lazy">
+                                        </div>
+                                        <span class="tool-name">Webpack</span>
+                                    </div>
+                                    
+                                    <div class="tool-item">
+                                        <div class="tool-icon">
+                                            <img src="assets/icons/figma.svg" alt="Figma" loading="lazy">
+                                        </div>
+                                        <span class="tool-name">Figma</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="section portfolio-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-number">03</span>
+                        <h2 class="section-title">Portfolio</h2>
+                        <p class="section-subtitle">
+                            Proyectos destacados que muestran mi experiencia
+                        </p>
+                    </div>
+                    
+                    <div class="portfolio-content">
+                        <!-- Filter Buttons -->
+                        <div class="portfolio-filters">
+                            <button class="filter-btn active" data-filter="all">
+                                Todos
+                            </button>
+                            <button class="filter-btn" data-filter="web">
+                                Web Apps
+                            </button>
+                            <button class="filter-btn" data-filter="mobile">
+                                Mobile
+                            </button>
+                            <button class="filter-btn" data-filter="design">
+                                UI/UX
+                            </button>
+                        </div>
+                        
+                        <!-- Portfolio Grid -->
+                        <div class="portfolio-grid">
+                            <article class="portfolio-item" data-category="web">
+                                <div class="portfolio-image">
+                                    <img src="assets/images/project1.jpg" alt="E-commerce Platform" loading="lazy">
+                                    <div class="portfolio-overlay">
+                                        <div class="portfolio-actions">
+                                            <button class="action-btn" data-action="view" data-project="1">
+                                                <span>Ver Detalles</span>
+                                            </button>
+                                            <a href="#" class="action-btn" target="_blank" rel="noopener">
+                                                <span>Ver Demo</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info">
+                                    <h3 class="portfolio-title">E-commerce Platform</h3>
+                                    <p class="portfolio-description">
+                                        Plataforma completa de comercio electrónico con panel administrativo.
+                                    </p>
+                                    <div class="portfolio-tech">
+                                        <span class="tech-tag">React</span>
+                                        <span class="tech-tag">Node.js</span>
+                                        <span class="tech-tag">MongoDB</span>
+                                    </div>
+                                </div>
+                            </article>
+                            
+                            <article class="portfolio-item" data-category="web">
+                                <div class="portfolio-image">
+                                    <img src="assets/images/project2.jpg" alt="Task Management App" loading="lazy">
+                                    <div class="portfolio-overlay">
+                                        <div class="portfolio-actions">
+                                            <button class="action-btn" data-action="view" data-project="2">
+                                                <span>Ver Detalles</span>
+                                            </button>
+                                            <a href="#" class="action-btn" target="_blank" rel="noopener">
+                                                <span>Ver Demo</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info">
+                                    <h3 class="portfolio-title">Task Management App</h3>
+                                    <p class="portfolio-description">
+                                        Aplicación de gestión de tareas con colaboración en tiempo real.
+                                    </p>
+                                    <div class="portfolio-tech">
+                                        <span class="tech-tag">Vue.js</span>
+                                        <span class="tech-tag">Socket.io</span>
+                                        <span class="tech-tag">Express</span>
+                                    </div>
+                                </div>
+                            </article>
+                            
+                            <article class="portfolio-item" data-category="mobile">
+                                <div class="portfolio-image">
+                                    <img src="assets/images/project3.jpg" alt="Weather App" loading="lazy">
+                                    <div class="portfolio-overlay">
+                                        <div class="portfolio-actions">
+                                            <button class="action-btn" data-action="view" data-project="3">
+                                                <span>Ver Detalles</span>
+                                            </button>
+                                            <a href="#" class="action-btn" target="_blank" rel="noopener">
+                                                <span>Ver Demo</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info">
+                                    <h3 class="portfolio-title">Weather App</h3>
+                                    <p class="portfolio-description">
+                                        App del clima con geolocalización y pronósticos detallados.
+                                    </p>
+                                    <div class="portfolio-tech">
+                                        <span class="tech-tag">React Native</span>
+                                        <span class="tech-tag">API Integration</span>
+                                        <span class="tech-tag">Geolocation</span>
+                                    </div>
+                                </div>
+                            </article>
+                            
+                            <article class="portfolio-item" data-category="design">
+                                <div class="portfolio-image">
+                                    <img src="assets/images/project4.jpg" alt="Brand Identity" loading="lazy">
+                                    <div class="portfolio-overlay">
+                                        <div class="portfolio-actions">
+                                            <button class="action-btn" data-action="view" data-project="4">
+                                                <span>Ver Detalles</span>
+                                            </button>
+                                            <a href="#" class="action-btn" target="_blank" rel="noopener">
+                                                <span>Ver Demo</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info">
+                                    <h3 class="portfolio-title">Brand Identity</h3>
+                                    <p class="portfolio-description">
+                                        Identidad visual completa para startup tecnológica.
+                                    </p>
+                                    <div class="portfolio-tech">
+                                        <span class="tech-tag">Figma</span>
+                                        <span class="tech-tag">Branding</span>
+                                        <span class="tech-tag">UI Design</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="section experience-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-number">04</span>
+                        <h2 class="section-title">Experiencia</h2>
+                        <p class="section-subtitle">
+                            Mi trayectoria profesional y educación
+                        </p>
+                    </div>
+                    
+                    <div class="experience-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker">
+                                    <div class="timeline-dot"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h3 class="timeline-title">Senior Full Stack Developer</h3>
+                                        <span class="timeline-company">TechCorp Solutions</span>
+                                        <span class="timeline-date">2022 - Presente</span>
+                                    </div>
+                                    <div class="timeline-description">
+                                        <p>
+                                            Liderazgo técnico en proyectos de gran escala, implementación 
+                                            de arquitecturas escalables y mentoría a desarrolladores junior.
+                                        </p>
+                                        <ul class="timeline-achievements">
+                                            <li>Desarrollo de microservicios con Node.js y Docker</li>
+                                            <li>Implementación de CI/CD que redujo tiempo de deploy en 60%</li>
+                                            <li>Liderazgo de equipo de 5 desarrolladores</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-marker">
+                                    <div class="timeline-dot"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h3 class="timeline-title">Frontend Developer</h3>
+                                        <span class="timeline-company">Digital Agency Pro</span>
+                                        <span class="timeline-date">2021 - 2022</span>
+                                    </div>
+                                    <div class="timeline-description">
+                                        <p>
+                                            Desarrollo de interfaces modernas y responsive para clientes 
+                                            corporativos, optimización de performance y UX.
+                                        </p>
+                                        <ul class="timeline-achievements">
+                                            <li>Desarrollo con React, Vue.js y JavaScript vanilla</li>
+                                            <li>Optimización SEO que mejoró ranking en 40%</li>
+                                            <li>Implementación de Progressive Web Apps</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-marker">
+                                    <div class="timeline-dot"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h3 class="timeline-title">Junior Web Developer</h3>
+                                        <span class="timeline-company">StartUp Innovate</span>
+                                        <span class="timeline-date">2020 - 2021</span>
+                                    </div>
+                                    <div class="timeline-description">
+                                        <p>
+                                            Desarrollo de aplicaciones web completas, desde la 
+                                            conceptualización hasta el deployment y mantenimiento.
+                                        </p>
+                                        <ul class="timeline-achievements">
+                                            <li>Desarrollo full-stack con MERN stack</li>
+                                            <li>Integración de APIs y servicios externos</li>
+                                            <li>Colaboración ágil con equipos multidisciplinarios</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-marker">
+                                    <div class="timeline-dot education"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h3 class="timeline-title">Ingeniería en Sistemas</h3>
+                                        <span class="timeline-company">Universidad Tecnológica</span>
+                                        <span class="timeline-date">2016 - 2020</span>
+                                    </div>
+                                    <div class="timeline-description">
+                                        <p>
+                                            Formación sólida en fundamentos de programación, 
+                                            algoritmos, estructuras de datos y arquitectura de software.
+                                        </p>
+                                        <ul class="timeline-achievements">
+                                            <li>Especialización en Desarrollo Web</li>
+                                            <li>Proyecto final: Plataforma e-learning</li>
+                                            <li>Promedio académico: 9.2/10</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section contact-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-number">05</span>
+                        <h2 class="section-title">Contacto</h2>
+                        <p class="section-subtitle">
+                            ¿Tienes un proyecto en mente? ¡Hablemos!
+                        </p>
+                    </div>
+                    
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <div class="contact-text">
+                                <h3 class="contact-heading">¿Listo para trabajar juntos?</h3>
+                                <p class="contact-description">
+                                    Estoy disponible para nuevos proyectos y colaboraciones. 
+                                    Ya sea que necesites una aplicación web completa, optimización 
+                                    de tu sitio actual, o consultoría técnica, estaré encantado 
+                                    de ayudarte a hacer realidad tus ideas.
+                                </p>
+                            </div>
+                            
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <div class="contact-icon">📧</div>
+                                    <div class="contact-data">
+                                        <span class="contact-label">Email</span>
+                                        <a href="mailto:mario@example.com" class="contact-value">
+                                            mario@example.com
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">📱</div>
+                                    <div class="contact-data">
+                                        <span class="contact-label">Teléfono</span>
+                                        <a href="tel:+34600000000" class="contact-value">
+                                            +34 600 000 000
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">📍</div>
+                                    <div class="contact-data">
+                                        <span class="contact-label">Ubicación</span>
+                                        <span class="contact-value">España</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">⏰</div>
+                                    <div class="contact-data">
+                                        <span class="contact-label">Disponibilidad</span>
+                                        <span class="contact-value">Lun - Vie, 9:00 - 18:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-container">
+                            <form id="contact-form" class="contact-form">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Nombre *</label>
+                                    <input 
+                                        type="text" 
+                                        id="name" 
+                                        name="name" 
+                                        class="form-input" 
+                                        placeholder="Tu nombre completo"
+                                        required
+                                        autocomplete="name"
+                                    >
+                                    <span class="form-error" id="name-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        class="form-input" 
+                                        placeholder="tu@email.com"
+                                        required
+                                        autocomplete="email"
+                                    >
+                                    <span class="form-error" id="email-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">Asunto</label>
+                                    <select id="subject" name="subject" class="form-select">
+                                        <option value="">Selecciona un tema</option>
+                                        <option value="proyecto">Nuevo Proyecto</option>
+                                        <option value="consultoria">Consultoría</option>
+                                        <option value="colaboracion">Colaboración</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="
+
+    <!-- Scripts -->
+    <script src="js/app.js" defer></script>
+    <script src="js/router.js" defer></script>
+    <script src="js/utils/dom.js" defer></script>
+    <script src="js/utils/animations.js" defer></script>
+    
+    <!-- Service Worker para PWA (opcional) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(error => console.log('SW registration failed'));
+            });
+        }
+    </script>
+</body>
+</html>
