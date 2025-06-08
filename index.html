@@ -38,7 +38,7 @@
     
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/variable.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
@@ -49,8 +49,8 @@
     <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
     
     <!-- Preload recursos críticos -->
-    <link rel="preload" href="js/app.js" as="script">
-    <link rel="preload" href="js/router.js" as="script">
+    <link rel="modulepreload" href="js/app.js" as="script">
+    <link rel="modulepreload" href="js/router.js" as="script">
     
     <title>Mario FCA - Portfolio | Desarrollador Full Stack | JavaScript, React, Node.js</title>
     
@@ -289,145 +289,140 @@
                 </div>
             </section>
 
-            <!-- Skills Section -->
-            <section id="skills" class="section skills-section">
-                <div class="container">
-                    <div class="section-header">
-                        <span class="section-number">02</span>
-                        <h2 class="section-title">Habilidades</h2>
-                        <p class="section-subtitle">
-                            Tecnologías y herramientas que domino
-                        </p>
-                    </div>
-                    
-                    <div class="skills-content">
-                        <div class="skills-categories">
-                            <div class="skill-category">
-                                <h3 class="category-title">Frontend</h3>
-                                <div class="skills-list">
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">HTML5 & CSS3</span>
-                                            <span class="skill-percentage">95%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" data-width="95"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">JavaScript</span>
-                                            <span class="skill-percentage">90%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" data-width="90"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">React</span>
-                                            <span class="skill-percentage">85%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" data-width="85"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">Vue.js</span>
-                                            <span class="skill-percentage">80%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" data-width="80"></div>
-                                        </div>
-                                    </div>
-                                </div>
+<!-- Skills Section -->
+<section id="skills" class="section skills-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">Habilidades</h2>
+            <p class="section-subtitle">
+                Tecnologías y herramientas que domino
+            </p>
+        </div>
+
+        <div class="skills-content">
+            <div class="skills-categories">
+                <!-- Categoría: Frontend -->
+                <div class="skill-category">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5 & CSS3</span>
+                                <span class="skill-percentage">95%</span>
                             </div>
-                            
-                            <div class="skill-category">
-                                <h3 class="category-title">Backend</h3>
-                                <div class="skills-list">
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">Node.js</span>
-                                            <span class="skill-percentage">88%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" data-width="88"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">Express.js</span>
-                                            <span class="skill-percentage">85%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" data-width="85"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">MongoDB</span>
-                                            <span class="skill-percentage">82%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" data-width="82"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">PostgreSQL</span>
-                                            <span class="skill-percentage">75%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" data-width="75"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
                             </div>
-                            
-                            <div class="skill-category">
-                                <h3 class="category-title">Herramientas</h3>
-                                <div class="tools-grid">
-                                    <div class="tool-item">
-                                        <div class="tool-icon">
-                                            <img src="assets/icons/git.svg" alt="Git" loading="lazy">
-                                        </div>
-                                        <span class="tool-name">Git</span>
-                                    </div>
-                                    
-                                    <div class="tool-item">
-                                        <div class="tool-icon">
-                                            <img src="assets/icons/docker.svg" alt="Docker" loading="lazy">
-                                        </div>
-                                        <span class="tool-name">Docker</span>
-                                    </div>
-                                    
-                                    <div class="tool-item">
-                                        <div class="tool-icon">
-                                            <img src="assets/icons/webpack.svg" alt="Webpack" loading="lazy">
-                                        </div>
-                                        <span class="tool-name">Webpack</span>
-                                    </div>
-                                    
-                                    <div class="tool-item">
-                                        <div class="tool-icon">
-                                            <img src="assets/icons/figma.svg" alt="Figma" loading="lazy">
-                                        </div>
-                                        <span class="tool-name">Figma</span>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Vue.js</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+
+                <!-- Categoría: Backend -->
+                <div class="skill-category">
+                    <h3 class="category-title">Backend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Express.js</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Cierre .skills-categories -->
+
+            <!-- Herramientas: DEBE IR AQUÍ -->
+            <div class="tools-wrapper">
+                <h3 class="category-title">Herramientas</h3>
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <img src="assets/icons/git.svg" alt="Git" loading="lazy">
+                        </div>
+                        <span class="tool-name">Git</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <img src="assets/icons/docker.svg" alt="Docker" loading="lazy">
+                        </div>
+                        <span class="tool-name">Docker</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <img src="assets/icons/webpack.svg" alt="Webpack" loading="lazy">
+                        </div>
+                        <span class="tool-name">Webpack</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <img src="assets/icons/figma.svg" alt="Figma" loading="lazy">
+                        </div>
+                        <span class="tool-name">Figma</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin herramientas -->
+        </div> 
+    </div> 
+</section>
 
             <!-- Portfolio Section -->
             <section id="portfolio" class="section portfolio-section">
@@ -982,15 +977,8 @@
     </div>
 
     <!-- Scripts - CARGA EXTERNA -->
-    <script src="js/utils/dom.js" defer></script>
-    <script src="js/utils/animations.js" defer></script>
-    <script src="js/components/navbar.js" defer></script>
-    <script src="js/components/hero.js" defer></script>
-    <script src="js/components/about.js" defer></script>
-    <script src="js/components/portfolio.js" defer></script>
-    <script src="js/components/contact.js" defer></script>
-    <script src="js/router.js" defer></script>
-    <script src="js/app.js" defer></script>
+    <script type="module" src="js/app.js"></script>
+
     
     <!-- Service Worker para PWA (opcional) -->
     <script>

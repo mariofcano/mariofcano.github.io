@@ -766,7 +766,14 @@ All component-specific styles for modern SPA
     transform: translateY(-2px);
     background: var(--bg-tertiary);
 }
-
+.tools-wrapper {
+    margin-top: var(--space-16);
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+}
 .tool-icon {
     width: 40px;
     height: 40px;
@@ -786,6 +793,8 @@ All component-specific styles for modern SPA
     font-weight: var(--font-weight-medium);
     color: var(--text-primary);
 }
+
+
 
 /* ==========================================
    PORTFOLIO SECTION
