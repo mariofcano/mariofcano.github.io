@@ -1,0 +1,764 @@
+/*
+===============================================
+RESPONSIVE.CSS - Ultra Responsive Design
+Mobile-first responsive system for all devices
+===============================================
+*/
+
+/* ==========================================
+   MOBILE FIRST APPROACH
+   Base styles are mobile, then enhanced for larger screens
+========================================== */
+
+/* ==========================================
+   EXTRA SMALL DEVICES (Phones < 475px)
+========================================== */
+
+@media (max-width: 474px) {
+    /* Container adjustments */
+    .container,
+    .container-fluid {
+        padding: 0 var(--space-3);
+    }
+    
+    /* Typography scaling */
+    .hero-title .title-name {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .hero-title .title-role {
+        font-size: var(--font-size-xl);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    /* Hero adjustments */
+    .hero-avatar {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .hero-actions {
+        gap: var(--space-3);
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Navigation */
+    .nav-container {
+        padding: 0 var(--space-3);
+    }
+    
+    .logo-text {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Cards spacing */
+    .card {
+        padding: var(--space-4);
+    }
+    
+    /* Skills grid */
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact form */
+    .contact-form-container {
+        padding: var(--space-4);
+    }
+    
+    /* Modal adjustments */
+    .modal {
+        padding: var(--space-2);
+    }
+    
+    .modal-container {
+        margin: var(--space-2);
+    }
+    
+    .modal-header,
+    .modal-content {
+        padding: var(--space-4);
+    }
+    
+    /* Portfolio grid */
+    .portfolio-grid {
+        gap: var(--space-4);
+    }
+    
+    /* Footer */
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+}
+
+/* ==========================================
+   SMALL DEVICES (Landscape phones, 475px - 640px)
+========================================== */
+
+@media (min-width: 475px) and (max-width: 639px) {
+    /* Hero improvements */
+    .hero-avatar {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .hero-actions {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    /* Skills tools grid */
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Portfolio filters */
+    .portfolio-filters {
+        gap: var(--space-3);
+    }
+    
+    .filter-btn {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--font-size-sm);
+    }
+    
+    /* About stats */
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-4);
+    }
+    
+    .stat-item {
+        padding: var(--space-4);
+    }
+    
+    .stat-number {
+        font-size: var(--font-size-2xl);
+    }
+}
+
+/* ==========================================
+   MEDIUM DEVICES (Tablets, 640px - 768px)
+========================================== */
+
+@media (min-width: 640px) and (max-width: 767px) {
+    /* Hero section */
+    .hero-content {
+        gap: var(--space-8);
+        text-align: center;
+    }
+    
+    .hero-avatar {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .hero-description {
+        max-width: 500px;
+    }
+    
+    /* Skills layout */
+    .skills-categories {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .skill-category {
+        padding: var(--space-6);
+    }
+    
+    /* Portfolio grid */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+    
+    /* Contact layout */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    /* Timeline adjustments */
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 60px;
+        margin-right: 0;
+        padding-left: var(--space-6);
+        padding-right: 0;
+        text-align: left;
+    }
+    
+    /* Footer */
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================
+   LARGE DEVICES (Desktops, 768px - 1024px)
+========================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Container max-width */
+    .container {
+        max-width: var(--container-md);
+    }
+    
+    /* Hero layout */
+    .hero-content {
+        grid-template-columns: 1.5fr 1fr;
+        gap: var(--space-12);
+    }
+    
+    .hero-text {
+        text-align: left;
+    }
+    
+    .hero-description {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Navigation visible */
+    .nav-menu {
+        display: flex;
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+    
+    /* About content */
+    .about-content {
+        grid-template-columns: 1.5fr 1fr;
+        gap: var(--space-12);
+    }
+    
+    /* Skills layout */
+    .skills-categories {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+    
+    /* Portfolio grid */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Contact layout */
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-12);
+    }
+    
+    /* Timeline full layout */
+    .timeline::before {
+        left: 50%;
+    }
+    
+    .timeline-marker {
+        left: 50%;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-left: 0;
+        margin-right: 50%;
+        padding-right: var(--space-8);
+        padding-left: 0;
+        text-align: right;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 50%;
+        margin-right: 0;
+        padding-left: var(--space-8);
+        padding-right: 0;
+        text-align: left;
+    }
+    
+    /* Modal improvements */
+    .modal-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .modal-actions {
+        flex-direction: row;
+    }
+}
+
+/* ==========================================
+   EXTRA LARGE DEVICES (Large desktops, 1024px - 1280px)
+========================================== */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    /* Container max-width */
+    .container {
+        max-width: var(--container-lg);
+    }
+    
+    /* Hero enhancements */
+    .hero-content {
+        grid-template-columns: 2fr 1fr;
+        gap: var(--space-16);
+    }
+    
+    .hero-avatar {
+        width: 320px;
+        height: 320px;
+    }
+    
+    /* About layout */
+    .about-content {
+        grid-template-columns: 2fr 1fr;
+        gap: var(--space-16);
+    }
+    
+    /* Skills back to 2 columns */
+    .skills-categories {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-12);
+    }
+    
+    /* Portfolio 3 columns */
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Section spacing */
+    .section {
+        padding: var(--space-24) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--space-20);
+    }
+    
+    /* Enhanced modal */
+    .modal-content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-8);
+    }
+    
+    .modal-image {
+        margin-bottom: 0;
+    }
+}
+
+/* ==========================================
+   2XL DEVICES (Large desktops, 1280px+)
+========================================== */
+
+@media (min-width: 1280px) {
+    /* Container max-width */
+    .container {
+        max-width: var(--container-xl);
+    }
+    
+    /* Large hero */
+    .hero-avatar {
+        width: 360px;
+        height: 360px;
+    }
+    
+    .hero-title .title-name {
+        font-size: clamp(4rem, 8vw, 6rem);
+    }
+    
+    .hero-title .title-role {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+    
+    /* Enhanced spacing */
+    .section {
+        padding: var(--space-32) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--space-24);
+    }
+    
+    /* Portfolio 4 columns on very large screens */
+    @media (min-width: 1400px) {
+        .portfolio-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+/* ==========================================
+   LANDSCAPE ORIENTATION ADJUSTMENTS
+========================================== */
+
+@media (orientation: landscape) and (max-height: 700px) {
+    /* Reduce hero section height on landscape mobile */
+    .hero-section {
+        min-height: auto;
+        padding: var(--space-16) 0;
+    }
+    
+    .hero-avatar {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+        text-align: center;
+    }
+    
+    .hero-scroll {
+        display: none;
+    }
+    
+    /* Adjust section padding */
+    .section {
+        padding: var(--space-12) 0;
+    }
+    
+    /* Compact navigation */
+    .navbar {
+        height: 50px;
+    }
+    
+    .header-height-mobile {
+        --header-height-mobile: 50px;
+    }
+}
+
+/* ==========================================
+   HIGH DPI / RETINA DISPLAYS
+========================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Enhanced image quality */
+    .hero-avatar img,
+    .portfolio-image img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+    
+    /* Smoother animations */
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Enhanced shadows for retina */
+    .card,
+    .btn-primary,
+    .modal-container {
+        box-shadow: var(--shadow-lg);
+    }
+}
+
+/* ==========================================
+   TOUCH DEVICE OPTIMIZATIONS
+========================================== */
+
+@media (hover: none) and (pointer: coarse) {
+    /* Remove hover effects on touch devices */
+    .btn::before,
+    .nav-link::after {
+        display: none;
+    }
+    
+    /* Larger touch targets */
+    .btn,
+    .nav-link,
+    .filter-btn,
+    .action-btn {
+        min-height: 48px;
+        padding: var(--space-3) var(--space-6);
+    }
+    
+    /* Simplified animations */
+    .card:hover,
+    .portfolio-item:hover,
+    .info-card:hover {
+        transform: none;
+    }
+    
+    /* Touch-friendly portfolio */
+    .portfolio-overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Remove cursor effects */
+    .cursor {
+        display: none;
+    }
+    
+    /* Enhanced tap targets */
+    .contact-item,
+    .timeline-content,
+    .skill-category {
+        padding: var(--space-6);
+    }
+}
+
+/* ==========================================
+   PRINT STYLES
+========================================== */
+
+@media print {
+    /* Hide interactive elements */
+    .header,
+    .nav-toggle,
+    .theme-toggle,
+    .back-to-top,
+    .hero-scroll,
+    .portfolio-filters,
+    .portfolio-overlay,
+    .contact-form,
+    .modal {
+        display: none !important;
+    }
+    
+    /* Optimize for print */
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000;
+        background: #fff;
+    }
+    
+    .section {
+        padding: 20pt 0;
+        page-break-inside: avoid;
+    }
+    
+    .hero-section {
+        min-height: auto;
+        padding-top: 0;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20pt;
+    }
+    
+    .hero-avatar {
+        width: 150pt;
+        height: 150pt;
+    }
+    
+    /* Typography for print */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        color: #000;
+    }
+    
+    .section-title {
+        font-size: 18pt;
+        margin-bottom: 10pt;
+    }
+    
+    /* Links */
+    a:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+    
+    /* Portfolio for print */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15pt;
+    }
+    
+    .portfolio-item {
+        page-break-inside: avoid;
+    }
+    
+    /* Timeline for print */
+    .timeline::before {
+        display: none;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        margin: 0;
+        padding: 10pt;
+        text-align: left;
+    }
+    
+    .timeline-marker {
+        display: none;
+    }
+}
+
+/* ==========================================
+   ACCESSIBILITY IMPROVEMENTS
+========================================== */
+
+/* Focus improvements for keyboard navigation */
+@media (prefers-reduced-motion: no-preference) {
+    .nav-link:focus,
+    .btn:focus,
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+        transform: scale(1.02);
+        transition: transform var(--duration-fast) var(--ease-out);
+    }
+}
+
+/* High contrast mode improvements */
+@media (prefers-contrast: high) {
+    .card,
+    .info-card,
+    .portfolio-item,
+    .timeline-content {
+        border: 2px solid currentColor;
+    }
+    
+    .btn {
+        border: 2px solid currentColor;
+    }
+    
+    .hero-gradient,
+    .glass-bg,
+    .backdrop-filter {
+        display: none;
+    }
+}
+
+/* ==========================================
+   CONTAINER QUERIES (Future-proofing)
+========================================== */
+
+/* When container queries are supported */
+@supports (container-type: inline-size) {
+    .portfolio-grid {
+        container-type: inline-size;
+    }
+    
+    @container (min-width: 400px) {
+        .portfolio-item {
+            display: grid;
+            grid-template-rows: auto 1fr;
+        }
+    }
+    
+    @container (min-width: 600px) {
+        .portfolio-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @container (min-width: 900px) {
+        .portfolio-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+/* ==========================================
+   DARK MODE RESPONSIVE ADJUSTMENTS
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+    /* Auto dark mode base styles */
+    :root:not([data-theme]) {
+        --bg-primary: var(--color-dark-50);
+        --bg-secondary: var(--color-dark-100);
+        --text-primary: var(--color-dark-900);
+        --text-secondary: var(--color-dark-600);
+    }
+}
+
+/* ==========================================
+   REDUCED DATA MODE
+========================================== */
+
+@media (prefers-reduced-data: reduce) {
+    /* Minimize data usage */
+    .hero-particles,
+    .hero-background,
+    .animate-particleFloat,
+    .animate-gradientShift {
+        display: none;
+    }
+    
+    /* Simpler images */
+    .portfolio-image img {
+        filter: none;
+    }
+    
+    /* Reduce animation complexity */
+    .animate-float,
+    .animate-pulse,
+    .animate-bounce {
+        animation: none;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE UTILITY CLASSES
+========================================== */
+
+/* Show/hide utilities for different breakpoints */
+.xs-hidden { display: none; }
+@media (min-width: 475px) { .xs-hidden { display: block; } }
+@media (min-width: 475px) { .xs-visible { display: none; } }
+
+.sm-hidden { display: block; }
+@media (min-width: 640px) { .sm-hidden { display: none; } }
+@media (max-width: 639px) { .sm-visible { display: none; } }
+@media (min-width: 640px) { .sm-visible { display: block; } }
+
+.md-hidden { display: block; }
+@media (min-width: 768px) { .md-hidden { display: none; } }
+@media (max-width: 767px) { .md-visible { display: none; } }
+@media (min-width: 768px) { .md-visible { display: block; } }
+
+.lg-hidden { display: block; }
+@media (min-width: 1024px) { .lg-hidden { display: none; } }
+@media (max-width: 1023px) { .lg-visible { display: none; } }
+@media (min-width: 1024px) { .lg-visible { display: block; } }
+
+.xl-hidden { display: block; }
+@media (min-width: 1280px) { .xl-hidden { display: none; } }
+@media (max-width: 1279px) { .xl-visible { display: none; } }
+@media (min-width: 1280px) { .xl-visible { display: block; } }
+
+/* Responsive text alignment */
+.text-center-mobile { text-align: center; }
+@media (min-width: 768px) { .text-center-mobile { text-align: left; } }
+
+.text-left-desktop { text-align: center; }
+@media (min-width: 768px) { .text-left-desktop { text-align: left; } }
+
+/* Responsive flex direction */
+.flex-col-mobile { flex-direction: column; }
+@media (min-width: 768px) { .flex-col-mobile { flex-direction: row; } }
+
+/* Responsive spacing */
+.gap-sm-mobile { gap: var(--space-4); }
+@media (min-width: 768px) { .gap-sm-mobile { gap: var(--space-8); } }
+
+.gap-lg-mobile { gap: var(--space-6); }
+@media (min-width: 768px) { .gap-lg-mobile { gap: var(--space-12); } }
+
+/*
+===============================================
+END RESPONSIVE.CSS
+Complete responsive system with mobile-first approach
+Supports all devices, orientations, and accessibility needs
+===============================================
+*/

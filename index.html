@@ -39,10 +39,10 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/base.scss">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive.scss">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
@@ -195,199 +195,7 @@
                         <div class="hero-visual">
                             <div class="hero-avatar">
                                 <img src="assets/images/avatar.jpg" alt="Mario FCA - Desarrollador Full Stack" loading="eager">
-                                <div class="form-group">
-                                    <label for="message" class="form-label">Mensaje *</label>
-                                    <textarea 
-                                        id="message" 
-                                        name="message" 
-                                        class="form-textarea" 
-                                        placeholder="Cuéntame sobre tu proyecto o consulta..."
-                                        rows="5"
-                                        required
-                                    ></textarea>
-                                    <span class="form-error" id="message-error"></span>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label class="form-checkbox">
-                                        <input type="checkbox" id="privacy" name="privacy" required>
-                                        <span class="checkbox-mark"></span>
-                                        <span class="checkbox-text">
-                                            Acepto la política de privacidad y el tratamiento de mis datos
-                                        </span>
-                                    </label>
-                                    <span class="form-error" id="privacy-error"></span>
-                                </div>
-                                
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
-                                        <span class="btn-text">Enviar Mensaje</span>
-                                        <span class="btn-loading">Enviando...</span>
-                                    </button>
-                                </div>
-                                
-                                <div class="form-status" id="form-status"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-        
-        <!-- Footer -->
-        <footer id="footer" class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-brand">
-                        <div class="footer-logo">
-                            <span class="logo-text">Mario<span class="logo-accent">FCA</span></span>
-                        </div>
-                        <p class="footer-description">
-                            Desarrollador Full Stack apasionado por crear 
-                            experiencias digitales excepcionales.
-                        </p>
-                    </div>
-                    
-                    <div class="footer-links">
-                        <div class="footer-section">
-                            <h4 class="footer-title">Navegación</h4>
-                            <ul class="footer-list">
-                                <li><a href="#home" class="footer-link">Inicio</a></li>
-                                <li><a href="#about" class="footer-link">Sobre Mí</a></li>
-                                <li><a href="#skills" class="footer-link">Habilidades</a></li>
-                                <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
-                                <li><a href="#experience" class="footer-link">Experiencia</a></li>
-                                <li><a href="#contact" class="footer-link">Contacto</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="footer-section">
-                            <h4 class="footer-title">Servicios</h4>
-                            <ul class="footer-list">
-                                <li><span class="footer-text">Desarrollo Web</span></li>
-                                <li><span class="footer-text">Aplicaciones SPA</span></li>
-                                <li><span class="footer-text">APIs REST</span></li>
-                                <li><span class="footer-text">Consultoría Técnica</span></li>
-                                <li><span class="footer-text">Optimización SEO</span></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="footer-section">
-                            <h4 class="footer-title">Contacto</h4>
-                            <ul class="footer-list">
-                                <li>
-                                    <a href="mailto:mario@example.com" class="footer-link">
-                                        mario@example.com
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tel:+34600000000" class="footer-link">
-                                        +34 600 000 000
-                                    </a>
-                                </li>
-                                <li><span class="footer-text">España</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="footer-bottom">
-                    <div class="footer-copyright">
-                        <p>© 2024 Mario FCA. Todos los derechos reservados.</p>
-                    </div>
-                    <div class="footer-legal">
-                        <a href="#privacy" class="legal-link">Política de Privacidad</a>
-                        <a href="#terms" class="legal-link">Términos de Uso</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        
-        <!-- Modals -->
-        
-        <!-- Portfolio Modal -->
-        <div id="portfolio-modal" class="modal">
-            <div class="modal-overlay" id="modal-overlay"></div>
-            <div class="modal-container">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="modal-title">Título del Proyecto</h3>
-                    <button class="modal-close" id="modal-close">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                
-                <div class="modal-content">
-                    <div class="modal-image">
-                        <img id="modal-image" src="" alt="" loading="lazy">
-                    </div>
-                    
-                    <div class="modal-info">
-                        <div class="modal-description">
-                            <p id="modal-description">Descripción del proyecto...</p>
-                        </div>
-                        
-                        <div class="modal-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Cliente:</span>
-                                <span class="detail-value" id="modal-client">-</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Duración:</span>
-                                <span class="detail-value" id="modal-duration">-</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Año:</span>
-                                <span class="detail-value" id="modal-year">-</span>
-                            </div>
-                        </div>
-                        
-                        <div class="modal-tech">
-                            <h4 class="tech-title">Tecnologías Utilizadas:</h4>
-                            <div class="tech-list" id="modal-tech-list">
-                                <!-- Tech tags will be inserted here -->
-                            </div>
-                        </div>
-                        
-                        <div class="modal-features">
-                            <h4 class="features-title">Características Principales:</h4>
-                            <ul class="features-list" id="modal-features-list">
-                                <!-- Features will be inserted here -->
-                            </ul>
-                        </div>
-                        
-                        <div class="modal-actions">
-                            <a id="modal-demo" href="#" class="btn btn-primary" target="_blank" rel="noopener">
-                                Ver Demo
-                            </a>
-                            <a id="modal-code" href="#" class="btn btn-secondary" target="_blank" rel="noopener">
-                                Ver Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Back to Top Button -->
-        <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="m18 15-6-6-6 6"/>
-            </svg>
-        </button>
-        
-        <!-- Cursor Effect (Desktop) -->
-        <div class="cursor" id="cursor">
-            <div class="cursor-dot"></div>
-            <div class="cursor-outline"></div>
-        </div>
-        
-        <!-- Progress Bar -->
-        <div class="scroll-progress">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
-        
-    </div>avatar-ring"></div>
+                                <div class="avatar-ring"></div>
                                 <div class="avatar-decoration"></div>
                             </div>
                         </div>
@@ -979,13 +787,210 @@
                                     </select>
                                 </div>
                                 
-                                <div class="
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Mensaje *</label>
+                                    <textarea 
+                                        id="message" 
+                                        name="message" 
+                                        class="form-textarea" 
+                                        placeholder="Cuéntame sobre tu proyecto o consulta..."
+                                        rows="5"
+                                        required
+                                    ></textarea>
+                                    <span class="form-error" id="message-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-checkbox">
+                                        <input type="checkbox" id="privacy" name="privacy" required>
+                                        <span class="checkbox-mark"></span>
+                                        <span class="checkbox-text">
+                                            Acepto la política de privacidad y el tratamiento de mis datos
+                                        </span>
+                                    </label>
+                                    <span class="form-error" id="privacy-error"></span>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                                        <span class="btn-text">Enviar Mensaje</span>
+                                        <span class="btn-loading">Enviando...</span>
+                                    </button>
+                                </div>
+                                
+                                <div class="form-status" id="form-status"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Scripts -->
-    <script src="js/app.js" defer></script>
-    <script src="js/router.js" defer></script>
+        </main>
+        
+        <!-- Footer -->
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <span class="logo-text">Mario<span class="logo-accent">FCA</span></span>
+                        </div>
+                        <p class="footer-description">
+                            Desarrollador Full Stack apasionado por crear 
+                            experiencias digitales excepcionales.
+                        </p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h4 class="footer-title">Navegación</h4>
+                            <ul class="footer-list">
+                                <li><a href="#home" class="footer-link">Inicio</a></li>
+                                <li><a href="#about" class="footer-link">Sobre Mí</a></li>
+                                <li><a href="#skills" class="footer-link">Habilidades</a></li>
+                                <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
+                                <li><a href="#experience" class="footer-link">Experiencia</a></li>
+                                <li><a href="#contact" class="footer-link">Contacto</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 class="footer-title">Servicios</h4>
+                            <ul class="footer-list">
+                                <li><span class="footer-text">Desarrollo Web</span></li>
+                                <li><span class="footer-text">Aplicaciones SPA</span></li>
+                                <li><span class="footer-text">APIs REST</span></li>
+                                <li><span class="footer-text">Consultoría Técnica</span></li>
+                                <li><span class="footer-text">Optimización SEO</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 class="footer-title">Contacto</h4>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="mailto:mario@example.com" class="footer-link">
+                                        mario@example.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+34600000000" class="footer-link">
+                                        +34 600 000 000
+                                    </a>
+                                </li>
+                                <li><span class="footer-text">España</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        <p>© 2024 Mario FCA. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="footer-legal">
+                        <a href="#privacy" class="legal-link">Política de Privacidad</a>
+                        <a href="#terms" class="legal-link">Términos de Uso</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Modals -->
+        
+        <!-- Portfolio Modal -->
+        <div id="portfolio-modal" class="modal">
+            <div class="modal-overlay" id="modal-overlay"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-title">Título del Proyecto</h3>
+                    <button class="modal-close" id="modal-close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                
+                <div class="modal-content">
+                    <div class="modal-image">
+                        <img id="modal-image" src="" alt="" loading="lazy">
+                    </div>
+                    
+                    <div class="modal-info">
+                        <div class="modal-description">
+                            <p id="modal-description">Descripción del proyecto...</p>
+                        </div>
+                        
+                        <div class="modal-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Cliente:</span>
+                                <span class="detail-value" id="modal-client">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Duración:</span>
+                                <span class="detail-value" id="modal-duration">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Año:</span>
+                                <span class="detail-value" id="modal-year">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-tech">
+                            <h4 class="tech-title">Tecnologías Utilizadas:</h4>
+                            <div class="tech-list" id="modal-tech-list">
+                                <!-- Tech tags will be inserted here -->
+                            </div>
+                        </div>
+                        
+                        <div class="modal-features">
+                            <h4 class="features-title">Características Principales:</h4>
+                            <ul class="features-list" id="modal-features-list">
+                                <!-- Features will be inserted here -->
+                            </ul>
+                        </div>
+                        
+                        <div class="modal-actions">
+                            <a id="modal-demo" href="#" class="btn btn-primary" target="_blank" rel="noopener">
+                                Ver Demo
+                            </a>
+                            <a id="modal-code" href="#" class="btn btn-secondary" target="_blank" rel="noopener">
+                                Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m18 15-6-6-6 6"/>
+            </svg>
+        </button>
+        
+        <!-- Cursor Effect (Desktop) -->
+        <div class="cursor" id="cursor">
+            <div class="cursor-dot"></div>
+            <div class="cursor-outline"></div>
+        </div>
+        
+        <!-- Progress Bar -->
+        <div class="scroll-progress">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        
+    </div>
+
+    <!-- Scripts - CARGA EXTERNA -->
     <script src="js/utils/dom.js" defer></script>
     <script src="js/utils/animations.js" defer></script>
+    <script src="js/components/navbar.js" defer></script>
+    <script src="js/components/hero.js" defer></script>
+    <script src="js/components/about.js" defer></script>
+    <script src="js/components/portfolio.js" defer></script>
+    <script src="js/components/contact.js" defer></script>
+    <script src="js/router.js" defer></script>
+    <script src="js/app.js" defer></script>
     
     <!-- Service Worker para PWA (opcional) -->
     <script>
